@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="الموقع الشخصي لوليد الغنام - مهتم بتطوير البرمجيات وتقنيات الويب." />
+  <title>وليد الغنام | موقعي الشخصي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="القائمة الرئيسية">
+      <a href="#home" class="brand">وليد<span>.</span></a>
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#home" class="active">الرئيسية</a><a href="#about">نبذة عني</a><a href="#skills">مهاراتي</a><a href="#projects">مشاريعي</a><a href="#contact">تواصل معي</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="تبديل الوضع الليلي">☾</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container section" id="home">
+      <div class="hero-content reveal">
+        <span class="eyebrow"><span class="status-dot"></span> أهلاً بك في موقعي الشخصي</span>
+        <h1>مرحباً، أنا <span class="gradient-text">وليد الغنام</span></h1>
+        <p class="hero-subtitle">مهتم بالبرمجة وتطوير الويب وبناء حلول تقنية مبتكرة.</p>
+        <p class="muted">أحب أتعلم تقنيات جديدة وأطور مهاراتي باستمرار، وأسعى لتحويل الأفكار إلى مشاريع رقمية مفيدة وسهلة الاستخدام.</p>
+        <div class="hero-actions"><a class="btn primary" href="#projects">استكشف أعمالي ←</a><a class="btn secondary" href="#contact">تواصل معي</a></div>
+        <div class="hero-stats"><div><strong>HTML</strong><small>بناء المواقع</small></div><div><strong>CSS</strong><small>تصميم الواجهات</small></div><div><strong>Python</strong><small>الخادم وقاعدة البيانات</small></div></div>
+      </div>
+      <div class="hero-art reveal" aria-hidden="true"><div class="glow"></div><div class="profile-card"><div class="avatar">و</div><div class="code-line"><span>const</span> developer = {</div><div class="code-line indent">name: <em>"وليد الغنام"</em>,</div><div class="code-line indent">passion: <em>"البرمجة"</em>,</div><div class="code-line indent">goal: <em>"التطور المستمر"</em></div><div class="code-line">};</div><div class="card-footer"><span class="status-dot"></span> جاهز لتحديات جديدة</div></div></div>
+    </section>
+    <section class="section section-alt" id="about"><div class="container reveal"><div class="section-heading"><span class="eyebrow">تعرّف عليّ</span><h2>نبذة <span class="gradient-text">عني</span></h2></div><div class="about-grid"><div class="about-text"><h3>شغفي يبدأ من فكرة وينتهي بحل عملي</h3><p>أنا وليد الغنام، مهتم بمجال برمجيات الحاسب وتقنيات الإنترنت. أستمتع بتعلم الأدوات الجديدة والعمل على تطوير واجهات ويب واضحة وجذابة، وأهتم بالتفاصيل التي تجعل تجربة المستخدم أفضل.</p><p>أطمح إلى اكتساب المزيد من الخبرة والمشاركة في مشاريع تقنية أستطيع من خلالها تطوير قدراتي وتقديم قيمة حقيقية.</p><a href="#contact" class="text-link">خلّنا نتواصل ←</a></div><div class="info-card"><div class="info-row"><span>الاسم</span><strong>وليد الغنام</strong></div><div class="info-row"><span>المجال</span><strong>برمجيات الحاسب</strong></div><div class="info-row"><span>الاهتمامات</span><strong>تطوير الويب والتقنية</strong></div><div class="info-row"><span>اللغة</span><strong>العربية</strong></div></div></div></div></section>
+    <section class="section container" id="skills"><div class="section-heading reveal"><span class="eyebrow">ما أتعلمه وأعمل عليه</span><h2>مهاراتي <span class="gradient-text">التقنية</span></h2><p>مجالات وتقنيات أركز على تطوير معرفتي بها.</p></div><div class="cards-grid skills-grid"><article class="feature-card reveal"><div class="feature-icon">⌘</div><h3>HTML5</h3><p>بناء صفحات ويب منظمة ومتوافقة مع مختلف الأجهزة.</p><span class="tag">هيكلة المحتوى</span></article><article class="feature-card reveal"><div class="feature-icon">✦</div><h3>CSS3</h3><p>تصميم واجهات جذابة ومتجاوبة مع جميع الشاشات.</p><span class="tag">التصميم المتجاوب</span></article><article class="feature-card reveal"><div class="feature-icon">{ }</div><h3>JavaScript</h3><p>إضافة التفاعل والوظائف الديناميكية لصفحات الويب.</p><span class="tag">تطوير الواجهات</span></article><article class="feature-card reveal"><div class="feature-icon">🐍</div><h3>Python + Flask</h3><p>برمجة الخادم واستقبال الرسائل وحفظها في قاعدة بيانات SQLite.</p><span class="tag">Backend</span></article><article class="feature-card reveal"><div class="feature-icon">▤</div><h3>قواعد البيانات</h3><p>الاهتمام بأساسيات SQL وتنظيم البيانات والتعامل معها.</p><span class="tag">SQL</span></article></div></section>
+    <section class="section section-alt" id="projects"><div class="container"><div class="section-heading reveal"><span class="eyebrow">نماذج قابلة للتخصيص</span><h2>قسم <span class="gradient-text">المشاريع</span></h2><p>هذه بطاقات توضيحية، استبدلها بمشاريعك الحقيقية عند إضافتها.</p></div><div class="cards-grid projects-grid"><article class="project-card reveal"><div class="project-visual visual-one"><span>01</span><div class="mock-window"><i></i><i></i><i></i><div class="mock-bars"></div></div></div><div class="project-body"><div class="project-tags"><span>HTML</span><span>CSS</span></div><h3>موقع شخصي</h3><p>نموذج لموقع تعريفي متجاوب يعرض نبذة ومهارات ووسائل تواصل.</p><span class="project-label">مشروع نموذجي</span></div></article><article class="project-card reveal"><div class="project-visual visual-two"><span>02</span><div class="mock-dashboard"><b></b><b></b><b></b></div></div><div class="project-body"><div class="project-tags"><span>JavaScript</span><span>UI</span></div><h3>لوحة تحكم</h3><p>فكرة واجهة لعرض البيانات والإحصائيات بطريقة مرتبة وسهلة.</p><span class="project-label">فكرة للتنفيذ</span></div></article><article class="project-card reveal"><div class="project-visual visual-three"><span>03</span><div class="mock-phone"><div></div><b></b><b></b><b></b></div></div><div class="project-body"><div class="project-tags"><span>Responsive</span><span>Web</span></div><h3>واجهة تطبيق</h3><p>تصور لتجربة استخدام حديثة تعمل بسلاسة على الجوال.</p><span class="project-label">فكرة للتنفيذ</span></div></article></div></div></section>
+    <section class="section container" id="contact"><div class="section-heading reveal"><span class="eyebrow">لنتحدث</span><h2>تواصل <span class="gradient-text">معي</span></h2><p>عندك فكرة أو فرصة تعاون؟ أرسل رسالتك وسأكون سعيداً بالتواصل.</p></div><div class="contact-grid"><div class="contact-intro reveal"><h3>خلّنا نحول الأفكار إلى واقع</h3><p>تقدر تتواصل معي من خلال النموذج. النموذج يرسل الرسالة إلى خادم Python ويحفظها في قاعدة بيانات محلية.</p><div class="contact-note">🔒 تُحفظ الرسائل في قاعدة بيانات SQLite على الخادم. لا تنشر قاعدة البيانات للعامة.</div></div><form class="contact-form reveal" id="contact-form"><label for="name">الاسم</label><input id="name" name="name" type="text" placeholder="اكتب اسمك" required minlength="2" /><label for="email">البريد الإلكتروني</label><input id="email" name="email" type="email" placeholder="name@example.com" required /><label for="message">الرسالة</label><textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required minlength="10"></textarea><button class="btn primary" type="submit">إرسال الرسالة ←</button><p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p></form></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> وليد الغنام. جميع الحقوق محفوظة.</span><a href="#top">العودة للأعلى ↑</a></div></footer>
+</body>
+</html>
