@@ -70,30 +70,46 @@ if ('IntersectionObserver' in window) {
   sections.forEach(section => sectionObserver.observe(section));
 }
 
-// إرسال الرسائل فعلياً إلى خادم Python.
-form.addEventListener('submit', async event => {
-  event.preventDefault();
-  if (!form.reportValidity()) return;
-  const button = form.querySelector('button[type="submit"]');
-  button.disabled = true;
-  feedback.textContent = 'جارٍ إرسال الرسالة...';
-  try {
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: form.elements.name.value.trim(),
-        email: form.elements.email.value.trim(),
-        message: form.elements.message.value.trim()
-      })
-    });
-    const result = await response.json();
-    if (!response.ok) throw new Error(result.error || 'تعذر إرسال الرسالة');
-    feedback.textContent = 'تم استلام رسالتك بنجاح!';
-    form.reset();
-  } catch (error) {
-    feedback.textContent = error.message || 'حدث خطأ. حاول مرة أخرى.';
-  } finally {
-    button.disabled = false;
-  }
+// إرسال رسائل التواصل إلى البريد الإلكتروني
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    feedback.textContent = 'جاري إرسال الرسالة...';
+
+    try {
+        const response = await fetch(
+            'https://formsubmit.co/ajax/waleedghannam117@gmail.com',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: form.elements.name.value.trim(),
+                    email: form.elements.email.value.trim(),
+                    message: form.elements.message.value.trim(),
+                    _subject: 'رسالة جديدة من موقع وليد الغنام'
+                })
+            }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || result.success === false || result.success === 'false') {
+            throw new Error('تعذر إرسال الرسالة');
+        }
+
+        feedback.textContent = 'تم إرسال رسالتك بنجاح!';
+        form.reset();
+
+    } catch (error) {
+        feedback.textContent = 'حدث خطأ أثناء الإرسال، حاول مرة أخرى.';
+    } finally {
+        button.disabled = false;
+    }
 });
