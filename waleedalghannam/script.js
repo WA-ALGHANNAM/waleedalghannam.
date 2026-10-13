@@ -85,16 +85,10 @@ form.addEventListener('submit', async (event) => {
             'https://formsubmit.co/ajax/waleedghannam117@gmail.com',
             {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: form.elements.name.value.trim(),
-                    email: form.elements.email.value.trim(),
-                    message: form.elements.message.value.trim(),
-                    _subject: 'رسالة جديدة من موقع وليد الغنام'
-                })
+              headers: {
+    'Accept': 'application/json'
+},
+                body: new FormData(form)
             }
         );
 
